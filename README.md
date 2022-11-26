@@ -1,2 +1,2 @@
-# learn-sample-front
+# learn-sample-frontend
 Frontend sample
