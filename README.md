@@ -4,6 +4,7 @@ Frontend sample
 	- [Registration-Form](#registration-form)
 	- [Art-Works](#art-works)
 	- [Qsuestionnaire-Form](#qsuestionnaire-form)
+	- [Output-Date](#output-date)
 
 ## Registration-Form
 - サンプルデザイン
@@ -17,3 +18,7 @@ Frontend sample
 - サンプルデザイン
 - レスポンシブ
 - bootstrap
+
+## Output-Date
+- サンプルデザイン
+- 日付表示
