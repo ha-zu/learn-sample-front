@@ -1,0 +1,97 @@
+body{
+	background-color: #fafafa;
+}
+h1{
+	font-size: 24px;
+	margin: 0;
+}
+
+p{
+	font-size: 14px;
+}
+
+label{
+	/* block要素でlabelが改行を含む要素ということを認識させている
+	https: //developer.mozilla.org/ja/docs/Web/CSS/display
+	 */
+	display: block;
+	margin-bottom: .5em;
+}
+
+button{
+	width: 100%;
+	padding: 15px;
+	border: none;
+	border-radius: 3px;
+	background-color: #2096f3;
+	color: #fff;
+	/* x座標 y座標 ぼかし数値 色の指定 */
+	box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+}
+
+button:active{
+	/* ボタを押したときに押した感が出るようになる */
+	box-shadow: none;
+	transform: translateY(5px);
+}
+
+.content{
+	display: block;
+	background-color: #fff;
+	width: 600px;
+	/* 外側の余白 autoでどんな時も左右同じサイズになり中央配置になる*/
+	margin: 10px auto;
+	/* 内側の余白 */
+	padding: 30px;
+	border: solid #d1d1dd;
+}
+
+.control{
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+.line-center-out {
+	/* 画面幅いっぱいまで広げる */
+	width: 100%;
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid #d1d1dd;
+	/* フォーカス時の外枠をなしにできる */
+	outline: none;
+	/* emはデフォルトの文字の何倍するかを指定する */
+	font-size: 1.2em;
+}
+
+/* inputにフォーカスが当たった際に下線を引くためのproperty */
+.underline{
+	width: auto;
+	height: 2px;
+	background-color: #2096f3;
+	/*
+	relativeは自身がいる場所(元の位置)を基点とする
+	https: //developer.mozilla.org/ja/docs/Web/CSS/position
+	*/
+	position: relative;
+	/* これをしてないとフォーカスした時に灰色の線が残ってしまう */
+	top: -2px;
+	transform-origin: center;
+	transform: scaleX(0);
+}
+
+.line-center-out:focus + .underline{
+	transform: scaleX(1);
+	transition: transform 0.25s ease-out;
+	/*
+	https: //zenn.dev/azunasu/articles/581153b9ec1f92
+	 */
+	-webkit-transform: scaleX(1);
+	-webkit-transition: transform 0.5s ease-out;
+}
+
+.require{
+	color: #f33;
+	font-size: .9em;
+	font-weight: bold;
+	background-color: #fee;
+}
